@@ -139,6 +139,31 @@ app.get('/', function(request, response){
       }
     })
   }); //end app.post
+
+  app.put('/places/favorites/:name', function(request, response) {
+    console.log("###### PUT PLACES/FAVORITES ############");
+     console.log("request.body", request.body);
+     console.log("request.params:", request.params);
+
+     var old = {name: request.body.name};
+     var updateTo = request.body.your_comment;
+console.log("updateTo", updateTo);
+
+       db.collection(PLACES_COLLECTION).update(old,{$set:{your_comment: updateTo}},function (err, result) {
+         if (err) {
+           console.log("ERROR!", err);
+           response.json("error");
+         } else if (result.length) {
+           console.log('Found:', result);
+           response.json(result);
+         } else { //
+           console.log('No document(s) found with defined "find" criteria');
+           response.json("none found");
+         }
+
+       }); // end find
+   }); // end update
+
 /*************************END OF PLACES*****************************************/
 
 /*************************IMAGES*********************************************/
