@@ -12,7 +12,8 @@ app.use(bodyParser.json());
 var IMAGES_COLLECTION = "images";
 var PLACES_COLLECTION = "places";
 
-var url = 'mongodb://localhost:27017/weather_api';
+// var url = 'mongodb://localhost:27017/weather_api';
+var url = 'mongodb://heroku_8hz73dsh:jhji948p38kms886kbb9h9vgu6@ds029715.mlab.com:29715/heroku_8hz73dsh';
 
 mongodb.MongoClient.connect(process.env.MONGODB_URI || url, function (err, database) {
   if (err) {
@@ -23,7 +24,7 @@ mongodb.MongoClient.connect(process.env.MONGODB_URI || url, function (err, datab
   db = database;
   console.log("Database connection ready");
 
-  var server = app.listen(process.env.PORT || 3000, function () {
+  var server = app.listen(process.env.PORT || 80, function () {
     var port = server.address().port;
     console.log("App now running on port", port);
   });
@@ -154,10 +155,10 @@ console.log("updateTo", updateTo);
            console.log("ERROR!", err);
            response.json("error");
          } else if (result.length) {
-           console.log('Found:', result);
+           console.log('UPDATE:', result);
            response.json(result);
          } else { //
-           console.log('No document(s) found with defined "find" criteria');
+           console.log('ALL UPDATED!');
            response.json("none found");
          }
 
