@@ -1,6 +1,4 @@
-# API_PROJECT2_BE - BACKEND
-
-# PROJECT 2 WEATHER-IMAGE API
+# PROJECT 2 WEATHER-IMAGE API - BACKEND
 
 ### Weather Image Api:
 
@@ -17,6 +15,10 @@ https://morning-temple-77469.herokuapp.com/
 
 https://github.com/rikkirabz/API_PROJECT2_BE
 
+
+<img src="https://github.com/rikkirabz/API_PROJECT2_FE/blob/master/WEATHER%20HOME.png"/>
+
+<img src="https://github.com/rikkirabz/API_PROJECT2_FE/blob/master/WEATHER%20SEARCH.png"/>
 
 This is a fullstack web application that incorporates 2 API's, a backend server, a frontend server and a NoSql database. (Mongo)
 
@@ -37,6 +39,13 @@ The 2 API's that are implemented in this application are:
 - The user can delete the image/images as well.
 
 - 2 clear all buttons have been implemented to allow the user a quick fix if they would like to delete all their locations or images in 1 click.  An alert has been implemented to ensure that the user is confident with their decision. 
+
+-More Screenshots: 
+
+<img src="https://github.com/rikkirabz/API_PROJECT2_FE/blob/master/WEATHER%20BK.png"/>
+
+<img src="https://github.com/rikkirabz/API_PROJECT2_FE/blob/master/WEATHER%20FAV.png"/>
+
 
 ### MVP Checklist:
  - The user can search for a place to display; the current weather, a short description, the humidity level and some other temperature related information.
